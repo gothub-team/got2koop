@@ -6,6 +6,7 @@ export default {
         return {
             name: 'got2koop',
             region: 'eu-central-1',
+            profile: 'gothub-dev',
         };
     },
     stacks(app) {
