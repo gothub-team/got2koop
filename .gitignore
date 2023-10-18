@@ -2,8 +2,9 @@
 dist/
 # generated types
 .astro/
-# sst output
-.sst/
+# sst
+.sst
+cdk.context.json
 
 # dependencies
 node_modules/

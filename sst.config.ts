@@ -11,9 +11,14 @@ export default {
     },
     stacks(app) {
         app.stack(function Site({ stack }) {
-            const site = new AstroSite(stack, 'site');
+            const site = new AstroSite(stack, 'site', {
+                customDomain: {
+                    domainName: 'got2koop.dev.gothub.io',
+                    hostedZone: 'dev.gothub.io',
+                },
+            });
             stack.addOutputs({
-                url: site.url,
+                url: site.customDomainUrl || site.url,
             });
         });
     },
